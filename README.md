@@ -1,2 +1,1 @@
-# Timus
-- Author's name: MOHIN
+# Timus Online Judge Solutions
