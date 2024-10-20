@@ -1,22 +1,31 @@
-/**
- *    author: mohin    
-**/
-
-#include <bits/stdc++.h>
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+#include <stack>
 
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(0);
-    double n{};
-    vector<double> ans;
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+
+    #ifndef ONLINE_JUDGE
+        freopen("input.txt", "r", stdin);
+        freopen("output.txt", "w", stdout);
+    #endif
+
+    double n;
+    stack<double> results;
+
     while (cin >> n) {
-        ans.push_back(sqrt(n));
+        results.push(sqrt(n));
     }
-    reverse(ans.begin(), ans.end());
-    for (int i = 0; i < ans.size(); ++i) {
-        cout << setprecision(4) << fixed << ans[i] << endl;
+
+    while (!results.empty()) {
+        cout << fixed << setprecision(4) << results.top() << endl;
+        results.pop();
     }
+
     return 0;
 }
