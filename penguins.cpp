@@ -1,18 +1,25 @@
-/**
- *    author: mohin    
-**/
-
-#include <bits/stdc++.h>
+#include <iostream>
+#include <string>
+#include <map>
 
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(0);
-    int n{}, curr{};
-    string str{}, p{}, ans{};
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+
+    #ifndef ONLINE_JUDGE
+        freopen("input.txt", "r", stdin);
+        freopen("output.txt", "w", stdout);
+    #endif
+
+    int n, curr = 0;
+    string str, p, ans;
     map<string, int> mp;
+
     cin >> n;
+    
     for (int i = 0; i < n; ++i) {
         cin >> str >> p;
         mp[str] += 1;
@@ -21,7 +28,9 @@ int main() {
             curr += 1;
         }
     }
+
     ans = ans + ' ' + p;
     cout << ans << endl;
+
     return 0; 
 }
