@@ -1,16 +1,21 @@
-/**
- *    author: mohin    
-**/
-
-#include <bits/stdc++.h>
+#include <iostream>
+#include <cmath>
 
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(0);
-    long long n{}, m{}, x{};
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+
+    #ifndef ONLINE_JUDGE
+        freopen("input.txt", "r", stdin);
+        freopen("output.txt", "w", stdout);
+    #endif
+
+    long long n, m, x;
     cin >> n;
+
     for (int i = 0; i < n; ++i) {
         cin >> m;
         m = m - 1;
@@ -23,5 +28,6 @@ int main() {
             cout << 0 << endl;
         }
     }
+
     return 0; 
 }
