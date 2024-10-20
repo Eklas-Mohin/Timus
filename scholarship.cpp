@@ -1,18 +1,23 @@
-/**
- *    author: mohin    
-**/
-
-#include <bits/stdc++.h>
+#include <iostream>
 
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(0);
-    int n{}, m{};
-    bool flag{true};
-    double total{}, avg{};
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+
+    #ifndef ONLINE_JUDGE
+        freopen("input.txt", "r", stdin);
+        freopen("output.txt", "w", stdout);
+    #endif
+
+    int n, m;
+    bool flag = true;
+    double total = 0, avg;
+
     cin >> n;
+
     for (int i = 0; i < n; ++i) {
         cin >> m;
         total += m;
@@ -20,7 +25,9 @@ int main() {
             flag = false;
         }
     }
+
     avg = total / double(n);
+
     if (flag) {
         if (avg == 5) {
             cout << "Named" << endl;
@@ -32,5 +39,6 @@ int main() {
     } else {
         cout << "None" << endl;
     }
+    
     return 0;
 }
