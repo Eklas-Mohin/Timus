@@ -13,7 +13,6 @@ int main() {
     #endif
 
     int a, b;
-    
     cin >> a >> b;
 
     int sum = a + b;
