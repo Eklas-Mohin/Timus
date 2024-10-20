@@ -1,18 +1,25 @@
-/**
- *    author: mohin    
-**/
-
-#include <bits/stdc++.h>
+#include <iostream>
+#include <algorithm>
 
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(0);
-    int a{}, b{}, c{}, mn{};
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+
+    #ifndef ONLINE_JUDGE
+        freopen("input.txt", "r", stdin);
+        freopen("output.txt", "w", stdout);
+    #endif
+
+    int a, b, c;
     cin >> a >> b >> c;
-    mn = a - b * c;
+
+    int mn = a - b * c;
     mn = min(mn, a - b - c);
+
     cout << mn << endl;
+
     return 0;
 }
