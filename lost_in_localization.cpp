@@ -1,16 +1,20 @@
-/**
- *    author: mohin    
-**/
-
-#include <bits/stdc++.h>
+#include <iostream>
 
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(0);
-    int n{};
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+
+    #ifndef ONLINE_JUDGE
+        freopen("input.txt", "r", stdin);
+        freopen("output.txt", "w", stdout);
+    #endif
+
+    int n;
     cin >> n;
+
     if (n > 0 and n < 5) {
         cout << "few" << endl;
     } else if (n > 4 and n < 10) {
@@ -30,5 +34,6 @@ int main() {
     } else {
         cout << "legion" << endl;
     }
+    
     return 0;
 }
